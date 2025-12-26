@@ -1,14 +1,15 @@
-package com.ichthyss;
+package io.github.yuron622;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ItemStackUtilities extends ItemStack {
 
-    public ItemStack addDisplayName(Component component){
+    public ItemStack getSetDisplayName(Component component){
 
         ItemStack tmp = this;
         ItemMeta meta = tmp.getItemMeta();
@@ -18,13 +19,24 @@ public class ItemStackUtilities extends ItemStack {
         return tmp;
     }
 
-    public ItemStack addLore(List<? extends Component> list){
+    public ItemStack getAddLore(Component component){
 
         ItemStack tmp = this;
         ItemMeta meta = tmp.getItemMeta();
-        meta.lore(list);
+        List<Component> loreList = meta.lore();
+
+        if (loreList == null){
+            meta.lore(Collections.singletonList(component));
+
+        } else {
+            loreList.add(component);
+            meta.lore(loreList);
+        }
+
         tmp.setItemMeta(meta);
 
         return tmp;
     }
+
+
 }
