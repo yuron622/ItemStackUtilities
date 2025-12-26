@@ -1,4 +1,4 @@
-package io.github.yuron622;
+package com.github.yuron622;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.inventory.ItemStack;
