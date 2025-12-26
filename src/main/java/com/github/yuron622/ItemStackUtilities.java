@@ -15,9 +15,9 @@ public class ItemStackUtilities extends ItemStack {
         super(type, amount);
     }
 
-    public ItemStack getSetDisplayName(Component component){
+    public ItemStackUtilities getSetDisplayName(Component component){
 
-        ItemStack tmp = this;
+        ItemStackUtilities tmp = this;
         ItemMeta meta = tmp.getItemMeta();
         meta.displayName(component);
         tmp.setItemMeta(meta);
@@ -25,9 +25,9 @@ public class ItemStackUtilities extends ItemStack {
         return tmp;
     }
 
-    public ItemStack getAddLore(Component component){
+    public ItemStackUtilities getAddLore(Component component){
 
-        ItemStack tmp = this;
+        ItemStackUtilities tmp = this;
         ItemMeta meta = tmp.getItemMeta();
         List<Component> loreList = meta.lore();
 

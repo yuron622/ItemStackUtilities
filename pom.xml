@@ -6,7 +6,7 @@
 
     <groupId>com.github.yuron622</groupId>
     <artifactId>ItemStackUtilities</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <name>ItemStack Utilities</name>
     <description>Add some useful ItemStack and ItemMeta methods</description>
