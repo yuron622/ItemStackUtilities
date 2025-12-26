@@ -1,13 +1,19 @@
 package com.github.yuron622;
 
 import net.kyori.adventure.text.Component;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 import java.util.List;
 
 public class ItemStackUtilities extends ItemStack {
+
+    public ItemStackUtilities(@NotNull Material type, int amount) {
+        super(type, amount);
+    }
 
     public ItemStack getSetDisplayName(Component component){
 
